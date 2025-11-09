@@ -1,0 +1,93 @@
+# WordPress Core Files
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+
+# WordPress Core
+*.log
+wp-config.php
+wp-*.php
+xmlrpc.php
+readme.html
+license.txt
+
+# WordPress Cache
+/wp-content/cache/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+
+# WordPress Uploads - Uncomment if you want to ignore uploads
+# /wp-content/uploads/
+
+# WordPress Plugins - Keep only custom plugins
+/wp-content/plugins/*
+!/wp-content/plugins/.gitkeep
+
+# WordPress Themes - Keep only custom theme
+/wp-content/themes/*
+!/wp-content/themes/theme-caniincasa/
+!/wp-content/themes/.gitkeep
+
+# WordPress Updates
+/wp-content/upgrade/
+/wp-content/backup-db/
+/wp-content/backups/
+
+# WordPress Debug
+/wp-content/debug.log
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Editor Directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Composer
+/vendor/
+composer.phar
+
+# Build Files
+*.map
+/dist/
+/build/
+
+# Temporary Files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Database
+*.sql
+*.sqlite
+*.db
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Package Managers
+package-lock.json
+yarn.lock
