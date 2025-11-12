@@ -1018,3 +1018,502 @@
         position: static;
     }
 }
+
+/* ==========================================================================
+   Specific Archive Styles
+   ========================================================================== */
+
+/* Patologie Archive */
+.patologie-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.patologia-card {
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.patologia-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.patologia-card .badge {
+    margin-bottom: var(--spacing-sm);
+}
+
+.badge--gravita-lieve {
+    background: #10b981;
+    color: white;
+}
+
+.badge--gravita-moderata {
+    background: #f59e0b;
+    color: white;
+}
+
+.badge--gravita-grave {
+    background: #ef4444;
+    color: white;
+}
+
+.badge--gravita-critica {
+    background: #991b1b;
+    color: white;
+}
+
+.patologia-symptoms {
+    padding: var(--spacing-md);
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-md) 0;
+}
+
+.patologia-symptoms strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: #92400e;
+}
+
+.medical-disclaimer {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+}
+
+.alert {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid;
+}
+
+.alert--warning {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+/* FAQ Archive */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-card {
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+.faq-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-question {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.faq-answer-preview {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: var(--spacing-md) 0;
+}
+
+/* Dogsitter Archive */
+.dogsitter-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.dogsitter-card .badge--certified {
+    background: #10b981;
+    color: white;
+}
+
+.dogsitter-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+.dogsitter-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dogsitter-info .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dogsitter-info .price {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+/* Cucciolate Archive */
+.cucciolate-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.cucciolata-card .badge--available {
+    background: #10b981;
+    color: white;
+}
+
+.cucciolata-breed {
+    padding: var(--spacing-sm) 0;
+    margin: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cucciolata-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-sm);
+    margin: var(--spacing-md) 0;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--background-light);
+    border-radius: var(--radius-sm);
+}
+
+.info-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-card .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-card .value {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--spacing-xs);
+}
+
+.info-card.price-card {
+    background: #fef3c7;
+}
+
+.info-card.price-card .value {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.cucciolata-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-md) 0;
+    font-size: 0.9rem;
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.price-range input {
+    flex: 1;
+}
+
+/* Canili Archive */
+.canili-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.canile-card .badge--success {
+    background: #10b981;
+    color: white;
+}
+
+.canile-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+.canile-stats {
+    padding: var(--spacing-md);
+    background: var(--background-light);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    margin: var(--spacing-md) 0;
+}
+
+.canile-stats .stat {
+    display: block;
+    color: var(--text-secondary);
+}
+
+.canile-stats strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.canile-services {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: var(--spacing-md) 0;
+}
+
+.service-icon {
+    font-size: 1.5rem;
+    padding: var(--spacing-xs);
+    background: var(--background-light);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+}
+
+/* Centri Cinofili Archive */
+.centri-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.centro-card .badge--enci {
+    background: #004E89;
+    color: white;
+}
+
+.centro-card .badge--instructor {
+    background: #10b981;
+    color: white;
+}
+
+.centro-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.centro-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+.centro-services {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: var(--spacing-md) 0;
+}
+
+/* Pensioni Archive */
+.pensioni-grid {
+    margin-bottom: var(--spacing-xl);
+}
+
+.pensione-card .badge--success {
+    background: #10b981;
+    color: white;
+}
+
+.pensione-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+.pensione-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--background-light);
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-md) 0;
+}
+
+.pensione-info .info-item {
+    text-align: center;
+}
+
+.pensione-info .price {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.pensione-services {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    margin: var(--spacing-md) 0;
+}
+
+/* Archive Header Improvements */
+.archive-header {
+    position: relative;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.archive-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: var(--spacing-lg) auto 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Badge Improvements */
+.badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+}
+
+.badge--primary {
+    background: var(--primary);
+    color: white;
+}
+
+.badge--secondary {
+    background: var(--secondary);
+    color: white;
+}
+
+.badge--enci {
+    background: #004E89;
+    color: white;
+}
+
+.badge--fci {
+    background: #059669;
+    color: white;
+}
+
+.badge--emergency {
+    background: #dc2626;
+    color: white;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.badge--type {
+    background: var(--text-secondary);
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Location and Info Badges */
+.veterinario-card__location,
+.allevamento-card__location {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    color: var(--text-secondary);
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.veterinario-card__badges,
+.allevamento-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.veterinario-card__services,
+.allevamento-card__breeds {
+    margin: var(--spacing-md) 0;
+}
+
+.veterinario-card__services strong,
+.allevamento-card__breeds strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.veterinario-card__hours,
+.veterinario-card__contact,
+.allevamento-card__contact {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.contact-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
