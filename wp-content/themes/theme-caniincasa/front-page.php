@@ -12,18 +12,18 @@ get_header();
 <main id="main-content" class="site-main homepage">
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    <?php esc_html_e( 'Quando l\'amore a 4 zampe entra nella tua casa!', 'caniincasa' ); ?>
+                <h1 class="hero__title hero-title">
+                    <?php echo esc_html( get_theme_mod( 'caniincasa_hero_title', __( 'Benvenuto su CaninCasa.it', 'caniincasa' ) ) ); ?>
                 </h1>
-                <p class="hero-subtitle">
-                    <?php esc_html_e( 'La Guida Completa per Vivere con il Tuo Migliore Amico a Quattro Zampe!', 'caniincasa' ); ?>
+                <p class="hero__subtitle hero-subtitle">
+                    <?php echo esc_html( get_theme_mod( 'caniincasa_hero_subtitle', __( 'Tutto quello che devi sapere sui cani', 'caniincasa' ) ) ); ?>
                 </p>
-                <div class="hero-actions">
-                    <a href="<?php echo esc_url( get_post_type_archive_link( 'razze_di_cani' ) ); ?>" class="btn btn-primary btn-lg">
-                        <?php esc_html_e( 'Scopri le Razze', 'caniincasa' ); ?>
+                <div class="hero__cta hero-actions">
+                    <a href="<?php echo esc_url( get_theme_mod( 'caniincasa_hero_button_url', get_post_type_archive_link( 'razze_di_cani' ) ) ); ?>" class="btn btn-primary btn-lg">
+                        <?php echo esc_html( get_theme_mod( 'caniincasa_hero_button_text', __( 'Scopri di più', 'caniincasa' ) ) ); ?>
                     </a>
                     <a href="<?php echo esc_url( get_post_type_archive_link( 'allevamenti' ) ); ?>" class="btn btn-secondary btn-lg">
                         <?php esc_html_e( 'Trova un Allevamento', 'caniincasa' ); ?>

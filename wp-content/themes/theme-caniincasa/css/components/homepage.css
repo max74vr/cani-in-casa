@@ -16,6 +16,8 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-section::before {
@@ -25,9 +27,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%23ffffff" fill-opacity="0.1" d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z"></path></svg>') repeat-x bottom;
-    background-size: 1200px 120px;
-    opacity: 0.3;
+    background: inherit;
+    opacity: 0.9;
+    z-index: 0;
 }
 
 .hero-content {

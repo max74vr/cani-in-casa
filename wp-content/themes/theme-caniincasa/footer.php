@@ -39,12 +39,11 @@
 
             <div class="site-info">
                 <div class="footer-info-left">
-                    <p>
-                        &copy; <?php echo esc_html( date( 'Y' ) ); ?>
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                            <?php bloginfo( 'name' ); ?>
-                        </a>
-                        <?php esc_html_e( '- La Guida Completa per Vivere con il Tuo Migliore Amico a Quattro Zampe!', 'caniincasa' ); ?>
+                    <p class="footer-copyright">
+                        <?php
+                        $copyright = get_theme_mod( 'caniincasa_footer_copyright', '© ' . date( 'Y' ) . ' CaninCasa.it - Tutti i diritti riservati' );
+                        echo wp_kses_post( $copyright );
+                        ?>
                     </p>
                 </div>
 

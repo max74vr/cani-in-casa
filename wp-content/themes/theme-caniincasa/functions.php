@@ -226,6 +226,9 @@ if ( file_exists( CANIINCASA_INC_DIR . '/custom-fields.php' ) ) {
 // Template Functions
 require_once CANIINCASA_INC_DIR . '/template-functions.php';
 
+// Customizer
+require_once CANIINCASA_INC_DIR . '/customizer.php';
+
 // AJAX Handlers
 if ( file_exists( CANIINCASA_INC_DIR . '/ajax-handlers.php' ) ) {
     require_once CANIINCASA_INC_DIR . '/ajax-handlers.php';
