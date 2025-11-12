@@ -377,3 +377,74 @@ function caniincasa_get_province_list() {
         'VT' => 'Viterbo',
     );
 }
+
+/**
+ * Custom Comment Callback
+ *
+ * @param object $comment Comment object
+ * @param array  $args    Comment args
+ * @param int    $depth   Comment depth
+ */
+function caniincasa_custom_comment( $comment, $args, $depth ) {
+    $GLOBALS['comment'] = $comment;
+    ?>
+    <li <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
+        <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+            <div class="comment-author-avatar">
+                <?php echo get_avatar( $comment, 50 ); ?>
+            </div>
+
+            <div class="comment-content-wrapper">
+                <footer class="comment-meta">
+                    <div class="comment-author vcard">
+                        <?php
+                        printf(
+                            '<b class="fn">%s</b>',
+                            get_comment_author_link()
+                        );
+                        ?>
+                    </div>
+
+                    <div class="comment-metadata">
+                        <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+                            <time datetime="<?php comment_time( 'c' ); ?>">
+                                <?php
+                                printf(
+                                    esc_html__( '%1$s alle %2$s', 'caniincasa' ),
+                                    get_comment_date(),
+                                    get_comment_time()
+                                );
+                                ?>
+                            </time>
+                        </a>
+                    </div>
+                </footer>
+
+                <?php if ( '0' === $comment->comment_approved ) : ?>
+                    <p class="comment-awaiting-moderation">
+                        <?php esc_html_e( 'Il tuo commento è in attesa di moderazione.', 'caniincasa' ); ?>
+                    </p>
+                <?php endif; ?>
+
+                <div class="comment-content">
+                    <?php comment_text(); ?>
+                </div>
+
+                <div class="comment-reply">
+                    <?php
+                    comment_reply_link(
+                        array_merge(
+                            $args,
+                            array(
+                                'depth'      => $depth,
+                                'max_depth'  => $args['max_depth'],
+                                'reply_text' => __( 'Rispondi', 'caniincasa' ),
+                            )
+                        )
+                    );
+                    ?>
+                </div>
+            </div>
+        </article>
+    <?php
+}
