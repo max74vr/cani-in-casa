@@ -142,7 +142,7 @@ function caniincasa_scripts() {
         CANIINCASA_VERSION
     );
 
-    // Enqueue additional CSS files
+    // Enqueue main CSS
     wp_enqueue_style(
         'caniincasa-main',
         CANIINCASA_THEME_URI . '/css/main.css',
@@ -150,9 +150,38 @@ function caniincasa_scripts() {
         CANIINCASA_VERSION
     );
 
+    // Enqueue component CSS files
+    wp_enqueue_style(
+        'caniincasa-cards',
+        CANIINCASA_THEME_URI . '/css/components/cards.css',
+        array( 'caniincasa-main' ),
+        CANIINCASA_VERSION
+    );
+
+    wp_enqueue_style(
+        'caniincasa-forms',
+        CANIINCASA_THEME_URI . '/css/components/forms.css',
+        array( 'caniincasa-main' ),
+        CANIINCASA_VERSION
+    );
+
+    wp_enqueue_style(
+        'caniincasa-rating',
+        CANIINCASA_THEME_URI . '/css/components/rating.css',
+        array( 'caniincasa-main' ),
+        CANIINCASA_VERSION
+    );
+
+    wp_enqueue_style(
+        'caniincasa-homepage',
+        CANIINCASA_THEME_URI . '/css/components/homepage.css',
+        array( 'caniincasa-main' ),
+        CANIINCASA_VERSION
+    );
+
     // Enqueue main JavaScript
     wp_enqueue_script(
-        'caniincasa-main',
+        'caniincasa-main-js',
         CANIINCASA_THEME_URI . '/js/main.js',
         array( 'jquery' ),
         CANIINCASA_VERSION,
@@ -160,7 +189,7 @@ function caniincasa_scripts() {
     );
 
     // Localize script for AJAX
-    wp_localize_script( 'caniincasa-main', 'canincasaAjax', array(
+    wp_localize_script( 'caniincasa-main-js', 'canincasaAjax', array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'nonce'   => wp_create_nonce( 'caniincasa-nonce' ),
     ) );

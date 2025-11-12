@@ -20,7 +20,7 @@ function caniincasa_enqueue_additional_scripts() {
         wp_enqueue_script(
             'caniincasa-search-filter',
             CANIINCASA_THEME_URI . '/js/search-filter.js',
-            array( 'jquery', 'caniincasa-main' ),
+            array( 'jquery', 'caniincasa-main-js' ),
             CANIINCASA_VERSION,
             true
         );
